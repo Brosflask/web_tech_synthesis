@@ -6,6 +6,7 @@
 <title>Imbuto Contact Procedure</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="./stylesheet.css" rel="stylesheet">
 
 <body>
 <nav>
@@ -34,6 +35,95 @@
     </div>
   </div>
 </nav>
+
+<div class="page" id="page-contact">
+  <div class="contact-hero">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(240,180,41,.15);color:var(--gold);border-color:rgba(240,180,41,.3)">Get in Touch</div>
+      <h1 style="font-size:clamp(2rem,4vw,3.2rem);color:var(--white);margin-bottom:1rem">Contact Us</h1>
+      <p style="color:rgba(255,255,255,.75);max-width:580px;line-height:1.8">Whether you're an investor, NGO partner, customer, or community member — we'd love to hear from you.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Let's <em style="color:var(--green)">Grow Together</em></h2>
+          <p>We are always open to partnerships, funding conversations, volunteer opportunities, and community inquiries. Reach out — our team responds within 24–48 hours.</p>
+          <div class="contact-item">
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <span>contact@imbuto.org</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"></div>
+            <div class="contact-item-text">
+              <strong>Location</strong>
+              <span>Mahama Refugee Camp, Kirehe District, Rwanda</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"></div>
+            <div class="contact-item-text">
+              <strong>Website</strong>
+              <span>www.imbuto.org</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"></div>
+            <div class="contact-item-text">
+              <strong>Response Time</strong>
+              <span>Within 24–48 hours</span>
+            </div>
+          </div>
+          <div style="margin-top:2rem;padding:1.5rem;background:var(--offwhite);border-radius:14px">
+            <h4 style="font-size:.9rem;margin-bottom:.5rem;color:var(--navy)">Our Email is Live!</h4>
+            <p style="font-size:.85rem;color:var(--muted);line-height:1.6">You can now reach us directly at <strong>contact@imbuto.org</strong> — hosted professionally on Zoho Mail.</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin-bottom:1.5rem">Send Us a Message</h3>
+          <form id="contactForm" action="https://formspree.io/f/xkoqnlvb" method="POST" onsubmit="handleSubmit(event)">
+            <input type="hidden" name="_subject" value="New message from imbuto.org">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="first_name" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="last_name" placeholder="Your last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select name="subject">
+                <option>General Inquiry</option>
+                <option>Partnership / NGO Collaboration</option>
+                <option>Investment / Funding</option>
+                <option>Product Order / Wholesale</option>
+                <option>Volunteer / Join Team</option>
+                <option>Media / Press</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" placeholder="Tell us about your inquiry, organization, or how you'd like to collaborate..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn">🌱 Send Message</button>
+          </form>
+          <div id="formSuccess" style="display:none;background:rgba(82,196,123,.1);border:2px solid var(--ltgreen);border-radius:12px;padding:1.5rem;text-align:center;color:var(--green);font-weight:600;margin-top:1rem">Thank you for reaching out! We will reply within 24–48 hours. — Imbuto Plantation Farm Team</div>
+          <div id="formError" style="display:none;background:rgba(240,80,60,.1);border:2px solid #f05030;border-radius:12px;padding:1.2rem;text-align:center;color:#c03020;font-weight:600;margin-top:1rem">Something went wrong. Please email us directly at contact@imbuto.org</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 </body>
 </head>
 </html>

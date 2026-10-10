@@ -30,24 +30,22 @@ h1,h2,h3,h4{
 }
 
 a{
-    text-decoration:none;
+    /*text-decoration:none;*/
     color:inherit
 }
 img{
     max-width:100%
 }
-.page{
-    display:none;
-    animation: fadeIn .5s ease
-}
+
 .page .active{
     display:block
 }
+
 @keyframes fadeIn{
     from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}
 }
 
-/* ── NAV ── */
+ ── NAV ──
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(12,72,32,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(240,180,41,.15)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
 .nav-logo{display:flex;align-items:center;gap:.75rem;cursor:pointer}
@@ -139,8 +137,8 @@ section{padding:5rem 0}
 .activities-hero{background:var(--dkgreen);padding:8rem 0 5rem;color:var(--white)}
 .activity-block{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:4rem 0;border-bottom:1px solid rgba(0,0,0,.06)}
 .activity-block:last-child{border-bottom:none}
-.activity-block.reverse{direction:rtl}
-.activity-block.reverse > *{direction:ltr}
+.activity-block .reverse{direction:rtl}
+.activity-block .reverse > *{direction:ltr}
 .activity-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;color:rgba(26,122,60,.1);line-height:1;margin-bottom:-.5rem}
 .activity-visual{background:linear-gradient(135deg,var(--dkgreen),var(--green));border-radius:20px;padding:3rem;color:var(--white);min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
 .activity-visual h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--gold);margin-bottom:1rem}

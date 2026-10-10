@@ -6,9 +6,10 @@
 <title>Donate to Imbuto</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="./stylesheet.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
+<nav>
   <div class="nav-inner">
     <div class="nav-logo" onclick="showPage('home')">
       <img src="./images/logo.png" alt="Imbuto Logo" style="width:40px;height:40px;object-fit:contain;border-radius:6px">
@@ -34,5 +35,89 @@
     </div>
   </div>
 </nav>
+<div class="page" id="page-donate">
+  <div class="donate-hero">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(240,180,41,.15);color:var(--gold);border-color:rgba(240,180,41,.3);display:inline-block">Seed Funding Round</div>
+      <h1>Help Communities<br><em style="color:var(--gold)">Grow to Thrive</em></h1>
+      <p>We are seeking $50,000 in seed funding to launch operations, install 300 household gardens, and launch Imbuto Splash commercially.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="funding-ask">
+        <div class="amount">$50,000</div>
+        <div class="amount-sub">USD Seed Funding Target (~50M RWF)</div>
+        <p>Grants, donations, impact investment, and low-interest loans welcome. Every dollar goes directly to building food security for refugee families.</p>
+        <button class="btn-primary" style="margin-top:1.5rem" onclick="showPage('contact')">Get in Touch to Invest</button>
+      </div>
+
+      <div class="section-header center">
+        <div class="section-tag">Use of Funds</div>
+        <h2 class="section-title">Where Your <em>Money Goes</em></h2>
+      </div>
+      <div class="use-of-funds">
+        <div class="fund-item">
+          <span class="fund-pct">35%</span>
+          <div class="fund-label">Farm infrastructure & equipment</div>
+        </div>
+        <div class="fund-item">
+          <span class="fund-pct">25%</span>
+          <div class="fund-label">Home garden materials (300 households)</div>
+        </div>
+        <div class="fund-item">
+          <span class="fund-pct">20%</span>
+          <div class="fund-label">Processing facility setup & licensing</div>
+        </div>
+        <div class="fund-item">
+          <span class="fund-pct">20%</span>
+          <div class="fund-label">Staff, training & Year 1 operations</div>
+        </div>
+      </div>
+
+      <div class="section-header center mt-3">
+        <div class="section-tag">How to Help</div>
+        <h2 class="section-title">Ways to <em>Support Us</em></h2>
+      </div>
+      <div class="donate-options">
+        <div class="donate-option">
+          <h3>Donate</h3>
+          <p>Make a one-time or recurring donation to directly support farming operations, training programs, and household garden installations.</p>
+          <button class="btn-primary" style="margin-top:1rem;width:100%" onclick="showPage('contact')">Donate Now</button>
+        </div>
+        <div class="donate-option">
+          <h3>Impact Invest</h3>
+          <p>Become an impact investor with expected financial returns alongside measurable social outcomes — ideal for impact funds and ESG investors.</p>
+          <button class="btn-primary" style="margin-top:1rem;width:100%;background:var(--navy)" onclick="showPage('contact')">Invest Now</button>
+        </div>
+        <div class="donate-option">
+          <h3>Partner With Us</h3>
+          <p>NGOs, corporations, and institutions can partner through grant programs, in-kind contributions, technical assistance, or supply agreements.</p>
+          <button class="btn-primary" style="margin-top:1rem;width:100%;background:var(--dkgreen)" onclick="showPage('contact')">Partner Now</button>
+        </div>
+      </div>
+
+      <div style="background:var(--dkgreen);border-radius:20px;padding:3rem;margin-top:2rem">
+        <div class="section-header center" style="margin-bottom:2rem">
+          <h2 style="font-family:'Playfair Display',serif;color:var(--white);font-size:1.8rem">What Your Investment <em style="color:var(--gold)">Unlocks</em></h2>
+        </div>
+        <div class="cards-grid cols3" style="gap:1rem">
+          <div style="background:rgba(255,255,255,.08);border-radius:12px;padding:1.5rem;text-align:center">
+            <div style="font-size:1.8rem;font-weight:700;color:var(--gold);font-family:'Playfair Display',serif">300</div>
+            <div style="font-size:.85rem;color:rgba(255,255,255,.75);margin-top:.3rem">Households served in Year 1</div>
+          </div>
+          <div style="background:rgba(255,255,255,.08);border-radius:12px;padding:1.5rem;text-align:center">
+            <div style="font-size:1.8rem;font-weight:700;color:var(--gold);font-family:'Playfair Display',serif">25M</div>
+            <div style="font-size:.85rem;color:rgba(255,255,255,.75);margin-top:.3rem">RWF projected Year 1 revenue</div>
+          </div>
+          <div style="background:rgba(255,255,255,.08);border-radius:12px;padding:1.5rem;text-align:center">
+            <div style="font-size:1.8rem;font-weight:700;color:var(--gold);font-family:'Playfair Display',serif">5</div>
+            <div style="font-size:.85rem;color:rgba(255,255,255,.75);margin-top:.3rem">SDGs directly contributed to</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 </body>
 </html>
