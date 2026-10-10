@@ -30,9 +30,6 @@
       <a href="./donate.html" id="nav-donate" class="nav-cta">Donate / Invest</a>
       <a href="./imbuto-seeds-support-fund-form.html" id="nav-support"class="nav-cta">Support Fund Form</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
   </div>
 </nav>
 
@@ -84,7 +81,7 @@
         </div>
         <div class="contact-form">
           <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin-bottom:1.5rem">Send Us a Message</h3>
-          <form id="contactForm" action="https://formspree.io/f/xkoqnlvb" method="POST" onsubmit="handleSubmit(event)">
+          <form id="contactForm" method="POST" onsubmit="handleSubmit(event)">
             <input type="hidden" name="_subject" value="New message from imbuto.org">
             <div class="form-row">
               <div class="form-group">
@@ -115,7 +112,7 @@
               <label>Message</label>
               <textarea name="message" placeholder="Tell us about your inquiry, organization, or how you'd like to collaborate..." required></textarea>
             </div>
-            <button type="submit" class="form-submit" id="submitBtn">🌱 Send Message</button>
+            <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
           </form>
           <div id="formSuccess" style="display:none;background:rgba(82,196,123,.1);border:2px solid var(--ltgreen);border-radius:12px;padding:1.5rem;text-align:center;color:var(--green);font-weight:600;margin-top:1rem">Thank you for reaching out! We will reply within 24–48 hours. — Imbuto Plantation Farm Team</div>
           <div id="formError" style="display:none;background:rgba(240,80,60,.1);border:2px solid #f05030;border-radius:12px;padding:1.2rem;text-align:center;color:#c03020;font-weight:600;margin-top:1rem">Something went wrong. Please email us directly at contact@imbuto.org</div>
@@ -124,6 +121,25 @@
     </div>
   </section>
 </div>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
+          <img src="./images/logo.png" alt="Imbuto Logo" style="width:36px;height:36px;object-fit:contain;border-radius:4px">
+          <span class="footer-logo-text">IMBUTO</span><span class="footer-logo-text" style="color:var(--gold)">Plantation Farm</span>
+        </div>
+        <p>Empowering refugee families in Mahama Camp through sustainable agriculture, home gardens, and natural food production. Grow to Thrive.</p>
+        <div style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.4)">contact@imbuto.org</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Imbuto Plantation Farm · Mahama Refugee Camp, Rwanda · contact@imbuto.org</p>
+      <span class="footer-tagline">"Grow to Thrive"</span>
+    </div>
+  </div>
+</footer>
 </body>
 </head>
 </html>

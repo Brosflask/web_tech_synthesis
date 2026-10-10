@@ -6,6 +6,7 @@
 <title>Imbuto Plantation Farm — Grow to Thrive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="./stylesheet.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,10 +30,7 @@
       <a href="./impact.html" id="nav-impact">Impact</a>
       <a href="./contact.html" id="nav-contact">Contact</a>
       <a href="./donate.html" id="nav-donate" class="nav-cta">Donate / Invest</a>
-      <a href="./imbuto-seeds-support-fund-form.html">Support Fund Form</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+      <a href="./imbuto-seeds-support-fund-form.html" id="nav-support"class="nav-cta">Support Fund Form</a>
     </div>
   </div>
 </nav>
@@ -45,12 +43,12 @@
     <div class="hero-pattern"></div>
     <div class="hero-inner">
       <div>
-        <div class="hero-tag"><span>📍 Mahama Refugee Camp, Rwanda</span></div>
+        <div class="hero-tag"><span>Mahama Refugee Camp, Rwanda</span></div>
         <h1>Empowering Communities to <em>Grow to Thrive</em></h1>
         <p class="hero-desc">Imbuto Plantation Farm is a sustainable agriculture initiative transforming food insecurity into self-reliance for refugee families through farming, training, and natural food production.</p>
         <div class="hero-btns">
-          <button class="btn-primary" onclick="showPage('about')">🌱 Our Story</button>
-          <button class="btn-outline" onclick="showPage('donate')">💛 Support Us</button>
+          <button class="btn-primary" onclick="showPage('about')">Our Story</button>
+          <button class="btn-outline" onclick="showPage('donate')">Support Us</button>
         </div>
         <div class="hero-stats">
           <div class="hero-stat"><span class="hero-stat-num">1,000+</span><span class="hero-stat-label">Households in our market</span></div>
@@ -59,23 +57,20 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="floating-badge">🌿 100% Natural</div>
+        <div class="floating-badge"> 100% Natural</div>
         <div class="hero-card-main">
           <h3>What We Do</h3>
           <div class="hero-feature">
-            <div class="hero-feature-icon" style="background:rgba(240,180,41,.2)">🌾</div>
             <div class="hero-feature-text"><strong>Agricultural Cultivation</strong>Vegetables, fruits & tree tomatoes grown sustainably</div>
           </div>
           <div class="hero-feature">
-            <div class="hero-feature-icon" style="background:rgba(82,196,123,.2)">🏡</div>
             <div class="hero-feature-text"><strong>Home Garden Installation</strong>Custom gardens for every household in the camp</div>
           </div>
           <div class="hero-feature">
-            <div class="hero-feature-icon" style="background:rgba(82,148,196,.2)">🍶</div>
             <div class="hero-feature-text"><strong>Food Processing</strong>Imbuto Splash — 100% natural juice, stevia sweetened</div>
           </div>
           <div class="hero-feature">
-            <div class="hero-feature-icon" style="background:rgba(208,138,240,.2)">🎓</div>
+
             <div class="hero-feature-text"><strong>Skills Training</strong>Empowering women & youth as farm leaders</div>
           </div>
         </div>
@@ -93,22 +88,18 @@
       </div>
       <div class="cards-grid cols4">
         <div class="card">
-          <div class="card-icon" style="background:rgba(240,100,80,.1)">📦</div>
           <h3>Aid Dependency</h3>
           <p>Heavy reliance on humanitarian food aid creates long-term vulnerability and limits self-reliance for thousands of families.</p>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(82,196,123,.1)">🥬</div>
           <h3>Poor Nutrition</h3>
           <p>Limited access to fresh, diverse, and nutritious food directly affects the health and well-being of refugee families.</p>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(240,180,41,.1)">🌱</div>
           <h3>No Resources</h3>
           <p>Lack of agricultural training and resources prevents families from growing their own food sustainably.</p>
         </div>
         <div class="card">
-          <div class="card-icon" style="background:rgba(208,138,240,.1)">💵</div>
           <h3>Limited Income</h3>
           <p>Few income-generating opportunities restrict economic independence, especially for women and youth.</p>
         </div>
@@ -126,19 +117,16 @@
       </div>
       <div class="cards-grid cols3">
         <div class="card" style="border-top:4px solid var(--gold)">
-          <div class="card-icon" style="background:rgba(240,180,41,.1)">🌾</div>
           <h3>Agricultural Cultivation</h3>
           <p>Commercial-scale farming producing leafy vegetables, tree tomatoes, beetroot, carrots and herbs for local markets and processing.</p>
           <div style="margin-top:1rem"><span class="badge badge-gold">Primary Revenue</span></div>
         </div>
         <div class="card" style="border-top:4px solid var(--green)">
-          <div class="card-icon" style="background:rgba(82,196,123,.1)">🏡</div>
           <h3>Home Garden Installation</h3>
           <p>Custom-designed household gardens — raised beds, vertical systems, compost, irrigation — installed and maintained with full training.</p>
           <div style="margin-top:1rem"><span class="badge badge-green">Primary Revenue</span></div>
         </div>
         <div class="card" style="border-top:4px solid #7bc8f0">
-          <div class="card-icon" style="background:rgba(123,200,240,.1)">🍶</div>
           <h3>Food Processing</h3>
           <p>Centrally managed production of Imbuto Splash natural juices — Tree Tomato & Beetroot — plus packaged fresh produce lines.</p>
           <div style="margin-top:1rem"><span class="badge badge-navy">Growth Revenue</span></div>
@@ -154,8 +142,8 @@
       <h2 class="section-title" style="color:var(--white)">Ready to Help <em style="color:var(--gold)">Communities Thrive?</em></h2>
       <p class="section-sub" style="color:rgba(255,255,255,.72);margin:0 auto 2.5rem">We are seeking $50,000 in seed funding to launch operations and serve 300 households in Year 1.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <button class="btn-primary" onclick="showPage('donate')">💛 Donate or Invest</button>
-        <button class="btn-outline" onclick="showPage('contact')">📧 Get in Touch</button>
+        <button class="btn-primary" onclick="showPage('donate')">Donate or Invest</button>
+        <button class="btn-outline" onclick="showPage('contact')">Get in Touch</button>
       </div>
     </div>
   </section>
@@ -169,39 +157,15 @@
       <div class="footer-brand">
         <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
           <img src="./images/logo.png" alt="Imbuto Logo" style="width:36px;height:36px;object-fit:contain;border-radius:4px">
-          <span class="footer-logo-text">IMBUTO PLANTATION FARM</span>
+          <span class="footer-logo-text">IMBUTO</span><span class="footer-logo-text" style="color:var(--gold)">Plantation Farm</span>
         </div>
         <p>Empowering refugee families in Mahama Camp through sustainable agriculture, home gardens, and natural food production. Grow to Thrive.</p>
-        <div style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.4)">📧 contact@imbuto.org</div>
-      </div>
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <a onclick="showPage('home')">Home</a>
-        <a onclick="showPage('about')">About Us</a>
-        <a onclick="showPage('activities')">Activities</a>
-        <a onclick="showPage('products')">Products</a>
-        <a onclick="showPage('training')">Training</a>
-      </div>
-      <div class="footer-col">
-        <h4>Learn More</h4>
-        <a onclick="showPage('impact')">Impact</a>
-        
-        <a onclick="showPage('gallery')">Gallery</a>
-        
-        <a onclick="showPage('contact')">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <a onclick="showPage('donate')">Donate</a>
-        <a onclick="showPage('donate')">Invest</a>
-        <a onclick="showPage('donate')">Partner</a>
-        <a onclick="showPage('contact')">Volunteer</a>
-        <a onclick="showPage('contact')">Media / Press</a>
+        <div style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.4)">contact@imbuto.org</div>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Imbuto Plantation Farm · Mahama Refugee Camp, Rwanda · contact@imbuto.org</p>
-      <span class="footer-tagline">"Grow to Thrive" 🌱</span>
+      <span class="footer-tagline">"Grow to Thrive"</span>
     </div>
   </div>
 </footer>
