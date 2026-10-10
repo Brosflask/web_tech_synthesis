@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Form — Imbuto Seeds Support Fund</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="../std_stylesheet.css" rel="stylesheet">
+<link href="../support.css" rel="stylesheet">
+<script src="../support_script.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')">
+      <img src="../images/logo.png" alt="Imbuto Logo" style="width:40px;height:40px;object-fit:contain;border-radius:6px">
+      <div>
+        <span class="nav-logo-text">Imbuto</span>
+        <span class="nav-logo-sub">Plantation Farm</span>
+      </div>
+    </div>
+    
+    <div class="nav-links">
+      <a href="./index.html" id="nav-home" class="active">Home</a>
+      <a href="./about.html" id="nav-about">About</a>
+      <a href="./activities.html" id="nav-activities">Activities</a>
+      <a href="./products.html" id="nav-products">Products</a>
+      <a href="./training.html" id="nav-training">Training</a>
+      <a href="./impact.html" id="nav-impact">Impact</a>
+      <a href="./contact.html" id="nav-contact">Contact</a>
+      <a href="./donate.html" id="nav-donate" class="nav-cta">Donate / Invest</a>
+      <a href="./imbuto-seeds-support-fund-form.html" id="nav-support"class="nav-cta">Support Fund Form</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<section>
+  <div class="top-header">
+     <h1>Application Form</h1>
+     <p>We help small traders and small-scale workers get the tools they need to grow and expand their businesses. Fill in this information — the form takes only a few minutes.</p>
+  </header>
+  <div class="container">
+    <form id="applyForm" onsubmit="return false;">
+      <div class="apply-wrap">
+
+        <!-- Step 1 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>1</span> Your Information</div>
+          <div class="form-group">
+            <label class="field-label">Your full name *</label>
+            <input type="text" name="full_name" placeholder="Example: Uwase Marie" required>
+          </div>
+          <div class="form-group">
+            <label class="field-label">Phone number *</label>
+            <input type="tel" name="phone" placeholder="07XX XXX XXX" required>
+          </div>
+          <label class="field-label">Where you work</label>
+          <div class="form-row">
+            <div class="form-group"><input type="text" name="province" placeholder="Province"></div>
+            <div class="form-group"><input type="text" name="district" placeholder="District"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><input type="text" name="sector" placeholder="Sector"></div>
+            <div class="form-group"><input type="text" name="cell" placeholder="Cell"></div>
+          </div>
+          <label class="field-label">Your photo or a photo of your workplace *</label>
+          <div class="upload-box" onclick="document.getElementById('photoInput').click()">
+            📷 <span id="photoLabel">Click here to add a photo</span>
+            <input type="file" id="photoInput" name="photo" accept="image/*" style="display:none" onchange="document.getElementById('photoLabel').textContent = this.files[0] ? this.files[0].name : 'Click here to add a photo'">
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>2</span> What You Do?</div>
+          <p class="hint">What kind of business or work do you do?</p>
+          <div class="check-list">
+            <label class="check-item"><input type="checkbox" name="business_type" value="Vegetables"> Vegetables</label>
+            <label class="check-item"><input type="checkbox" name="business_type" value="Seeds"> Seeds</label>
+            <label class="check-item"><input type="checkbox" name="business_type" value="Cooked food"> Cooked food</label>
+            <label class="check-item"><input type="checkbox" name="business_type" value="Street vending"> Street vending</label>
+            <label class="check-item"><input type="checkbox" name="business_type" value="Small shop"> Small shop</label>
+            <label class="check-item"><input type="checkbox" name="business_type" value="Farming"> Farming</label>
+            <label class="check-item"><input type="checkbox" name="business_type" value="Drinks"> Drinks</label>
+            <label class="check-item"><input type="checkbox" name="business_type" value="Other"> Other:
+              <input type="text" name="business_type_other" placeholder="write here" style="border:none;border-bottom:1.5px solid rgba(0,0,0,.15);background:transparent;padding:.2rem;margin:0">
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>3</span> The Problem You Face</div>
+          <p class="hint">What is the biggest problem you face in your business?</p>
+          <div class="form-group">
+            <textarea name="main_challenge" placeholder='Example: "I cannot get enough money to restock so I can sell more."'></textarea>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>4</span> What You Need Support With</div>
+          <p class="hint">What goods or equipment would you need in order for your business to grow?</p>
+          <table class="item-table" id="itemTable">
+            <thead><tr><th>Good or Equipment</th><th style="width:110px">Quantity</th></tr></thead>
+            <tbody id="itemTableBody">
+              <tr><td><input type="text" name="item_name[]" placeholder="Example: Assorted seeds"></td><td><input type="text" name="item_qty[]" placeholder="Quantity"></td></tr>
+              <tr><td><input type="text" name="item_name[]" placeholder=""></td><td><input type="text" name="item_qty[]" placeholder=""></td></tr>
+            </tbody>
+          </table>
+          <button type="button" class="add-row-btn" onclick="addItemRow()">➕ Add another item</button>
+          <div class="apply-note">The first Imbuto Seeds Support Fund grant does not exceed <strong>10,000 Frw</strong>. This tier is meant to help you get what you need to start growing.</div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>5</span> How Your Business Is Doing </div>
+          <p class="hint">How much money do you earn per day from this business?</p>
+          <div class="radio-list">
+            <label class="radio-item"><input type="radio" name="daily_income" value="Less than 2,000 Frw"> Less than 2,000 Frw</label>
+            <label class="radio-item"><input type="radio" name="daily_income" value="2,000 – 5,000 Frw"> 2,000 – 5,000 Frw</label>
+            <label class="radio-item"><input type="radio" name="daily_income" value="5,000 – 10,000 Frw"> 5,000 – 10,000 Frw</label>
+            <label class="radio-item"><input type="radio" name="daily_income" value="More than 10,000 Frw"> More than 10,000 Frw</label>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>6</span> How the Grant Will Help You </div>
+          <p class="hint">How will this grant change or advance your business?</p>
+          <div class="form-group">
+            <textarea name="fund_impact" placeholder="Example: I will add more goods. I will get more customers. I will earn more money. I will buy tools that help me work better. I will be able to support my family better."></textarea>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>7</span> Learning and Building Skills </div>
+          <p class="hint">Imbuto doesn't only give grants — we also help people gain knowledge that helps them grow. What would you like to learn or be trained in?</p>
+          <div class="check-list">
+            <label class="check-item"><input type="checkbox" name="learning_interest" value="Saving and tracking money"> How to save and track incoming and outgoing money</label>
+            <label class="check-item"><input type="checkbox" name="learning_interest" value="Advertising and getting customers"> How to advertise and get more customers</label>
+            <label class="check-item"><input type="checkbox" name="learning_interest" value="Using a phone in business"> How to use a phone in business</label>
+            <label class="check-item"><input type="checkbox" name="learning_interest" value="Inventory management"> How to manage goods properly (inventory)</label>
+            <label class="check-item"><input type="checkbox" name="learning_interest" value="Saving and growing capital"> How to save and grow capital</label>
+            <label class="check-item"><input type="checkbox" name="learning_interest" value="Technology"> Knowledge in technology</label>
+            <label class="check-item"><input type="checkbox" name="learning_interest" value="Other"> Other:
+              <input type="text" name="learning_interest_other" placeholder="write here" style="border:none;border-bottom:1.5px solid rgba(0,0,0,.15);background:transparent;padding:.2rem;margin:0">
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>8</span> Tracking Your Progress </div>
+          <p class="hint">Do you agree to use a simple way of recording and tracking your daily activities so you can have the chance to receive more support?</p>
+          <div class="radio-list" style="grid-template-columns:repeat(2,140px)">
+            <label class="radio-item"><input type="radio" name="tracking_consent" value="Yes"> Yes</label>
+            <label class="radio-item"><input type="radio" name="tracking_consent" value="No"> No</label>
+          </div>
+        </div>
+
+        <!-- Step 9 -->
+        <div class="apply-step">
+          <div class="apply-step-num"><span>9</span> Confirmation </div>
+          <div class="check-list" style="grid-template-columns:1fr">
+            <label class="check-item"><input type="checkbox" name="confirm_true" required> I confirm that the information I have given is true.</label>
+            <label class="check-item"><input type="checkbox" name="confirm_use" required> I agree to use the grant for my business only.</label>
+            <label class="check-item"><input type="checkbox" name="confirm_no_guarantee" required> I understand that applying does not automatically mean I will receive the grant.</label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="apply-wrap apply-actions">
+        <button type="button" class="btn-ghost" onclick="saveDraft()"> Save Form</button>
+        <button type="button" class="btn-primary" onclick="submitApplication()"> Submit Application</button>
+      </div>
+    </form>
+
+    <p class="bottom-note">Imbuto Plantation Farm · Mahama Refugee Camp, Rwanda · <a href="mailto:contact@imbuto.org">contact@imbuto.org</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
+          <img src="../images/logo.png" alt="Imbuto Logo" style="width:36px;height:36px;object-fit:contain;border-radius:4px">
+          <span class="footer-logo-text">IMBUTO</span><span class="footer-logo-text" style="color:var(--gold)">Plantation Farm</span>
+        </div>
+        <p>Empowering refugee families in Mahama Camp through sustainable agriculture, home gardens, and natural food production. Grow to Thrive.</p>
+        <div style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,.4)">contact@imbuto.org</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Imbuto Plantation Farm · Mahama Refugee Camp, Rwanda · contact@imbuto.org</p>
+      <span class="footer-tagline">"Grow to Thrive"</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
